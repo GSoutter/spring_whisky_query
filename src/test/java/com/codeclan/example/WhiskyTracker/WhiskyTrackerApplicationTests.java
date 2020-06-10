@@ -47,5 +47,12 @@ public class WhiskyTrackerApplicationTests {
 		assertEquals("Skye", found.get(1).getName());
 	}
 
+	@Test
+	public void canGetWhiskyFromRegion() {
+		List<Whisky> found = whiskyRepository.findByDistilleryRegion("Island");
+		assertEquals(6, found.size());
+		assertEquals("Skye", found.get(3).getName());
+	}
+
 
 }
