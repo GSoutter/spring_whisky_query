@@ -35,7 +35,7 @@ public class WhiskyTrackerApplicationTests {
 	}
 
 	@Test
-	public void canGetDistilleriesByYear() {
+	public void canGetDistilleriesByRegion() {
 		List<Distillery> found = distilleryRepository.findByRegion("Islay");
 		assertEquals(2, found.size());
 	}
