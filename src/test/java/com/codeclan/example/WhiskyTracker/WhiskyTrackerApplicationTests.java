@@ -54,5 +54,13 @@ public class WhiskyTrackerApplicationTests {
 		assertEquals("Skye", found.get(3).getName());
 	}
 
+	@Test
+	public void canGetDistileriesWith12YoWhiskies() {
+		List<Distillery> found = distilleryRepository.findByWhiskiesAge(18);
+		assertEquals(2, found.size());
+		assertEquals(6L, found.get(0).getId().longValue());
+
+	}
+
 
 }
